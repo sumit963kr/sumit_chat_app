@@ -15,7 +15,11 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath));
 
-
+app.route("/health").get((req, res)=>{
+  return res.status(200).json({
+    message: "chat app is live"
+  })
+})
 
 io.on('connection', (socket) => {
   console.log('New Websocket connection');
