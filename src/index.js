@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require('express');//engine of the project
 const http = require('http');
 const path = require('path');
-const socketio = require('socket.io')
+const socketio = require('socket.io') //node_packet_manager(npm) 
 const Filter = require('bad-words')
 const app = express();
 const server = http.createServer(app);
